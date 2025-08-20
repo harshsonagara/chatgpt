@@ -29,8 +29,6 @@ async function postRegisterController(req, res) {
         email: email,
         password: hashedPassword
     })
-
-    await user.save();
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
 
     res.cookie('token', token);

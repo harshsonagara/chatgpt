@@ -68,9 +68,6 @@
         autoresize();
         scrollToBottom();
 
-
-        scrollToBottom();
-
         try {
             socket.emit('ai-message', text)
         } catch (err) {
